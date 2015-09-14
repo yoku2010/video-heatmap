@@ -1,0 +1,645 @@
+{
+  "bid": {# FIx
+    "type": "bid",# Fix
+    "event_date": "1",#Fix
+    "flexible_date": "Flexible Date",#Fix
+    "time_slot": {#Fix
+      "name": "Time Slot",#Fix
+      "value": [#Fix
+        [#Fix
+          "all_day",#Fix
+          "All Day"#Fix
+        ],
+        [
+          "morning",#Fix
+          "Morning"#Fix
+        ],
+        [
+          "evening",#Fix
+          "Evening"#Fix
+        ]
+      ]
+    },
+    "package_ios": {#Fix
+      "name": "Package",#Fix
+      "value": [#1+ number of k,v pair
+        [
+          "veg_package_1",
+          "Veg Pakackage 1"
+        ],
+        [
+          "veg_package_2",
+          "Veg Pakackage 2"
+        ]
+      ]
+    },
+    "package": {
+      "name": "Package",#Fix
+      "value": "", #By mistake put Fix and keep as it is
+      "package_list": {
+        "veg_package_1": {
+          "price": 500,#required
+          "select_val": "Veg Pakackage 1",#required
+          "description": "Description about veg package 1",#required
+          "desscription_url": "http://seekersguru.github.io/wwhtml/Venues-details.html",#optional
+          "pricing": {
+            "line1": "pricing line 1 veg pkg 1",#required
+            "line2": "pricing line 1 veg pkg 1"#required
+          }
+        },
+        "veg_package_2": { # Same as above
+          "price": 700,
+          "select_val": "Veg Pakackage 2",
+          "description": "Description about veg package 2",
+          "pricing": {
+            "line1": "pricing line 2 veg pkg 2",
+            "line2": "pricing line 2 veg pkg 2"
+          }
+        }
+      },
+      "package_order": [
+        "veg_package_1",
+        "veg_package_2"
+      ]
+    },
+    "num_guests": { #Optional
+      "min": 50, #Fix
+      "max": 500 #Fix
+    },
+    "notes": "Description(optional)",#Optional
+    "button": "Express Interest" #Fixed
+  },
+  "info": {## Its is clear all mandatory
+    "contact": "8298298982",
+    "starting_price": "250000/-",
+    "Hall Rental (If Any)": "none /-",
+    "top_name": "Grand Homotel Malad",
+    "hero_imgs": [
+      "/media/vendor_image/18/1.jpg",
+      "/media/vendor_image/18/2.jpg",
+      "/media/vendor_image/18/3.jpg",
+      "/media/vendor_image/18/4.jpg",
+      "/media/vendor_image/18/5.jpg",
+      "/media/vendor_image/18/6.jpg",
+      "/media/vendor_image/18/7.jpg",
+      "/media/vendor_image/18/8.jpg",
+      "/media/vendor_image/18/9.jpg",
+      "/media/vendor_image/18/10.jpg"
+    ],
+    "360_imgs": "http://www.vrv.co.in/ftpupload/Jw-marriott/virtualtour.html",
+    "top_address": "Sun-n-Sand Mumbai, 39, Juhu Beach, Mumbai - 400049",
+    "video_links": [
+      "http://seekersguru.github.io/wwhtml/catring-video.html"
+    ],
+    "email": "banquet_homotel@wedwise.in",
+    "name": "Grand Homotel Malad"
+  },
+
+  ##This sectionis depend on data type
+  ## key_value  => heading, key_values , ==> read_more (optional)
+  ## para
+  ## map
+  ## packages
+  "sections": [
+    {
+      "heading": "General Information", ## FIX
+      "data_display": [
+        {
+          "type": "key_value",
+          "key_values": [#1+ values to be enytered, 3 values
+            {
+              "Starting Price": "Rs. 1,200 per plate" #By default
+            },
+            {
+              "Capactiy": "200 - 800 guests"
+            },
+            {
+              "Venue Type": "Hotel Banquet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Food Packages", # Fix
+      "data_display": [
+        {
+          "type": "key_value", # 3 values
+          "key_values": [
+            {
+              "Package 1 (Lunch)": "600 /- per plate"
+            },
+            {
+              "Package 2 (Dinner)": "900 /- per plate"
+            },
+            {
+              "Package 3 (Lunch/Dinner)": "1100 /- per plate minimum 300 peoples"
+            }
+          ],
+          "read_more": [
+            {
+              "heading": "Food Packages",#Fix
+              "data_display": [
+                {
+                  "type": "packages",#Fix
+                  "Lunch": {#Fix
+                    "package_values": [#1+
+                      {
+                        "quoted": {#Take values, key fix
+                          "Quoted Price": "1800"
+                        },
+                        "minimum": {#Take Values, key fix
+                          "Minimum Price": "1600"
+                        },
+                        "label": "Veg Package 1 ( 600 /- per plate)",#key fix
+                        "options": [ #kv pairs 1+
+                          {
+                            "Welcome Drink (2)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (4)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (4)": "Veg"
+                          },
+                          {
+                            "Soup (2)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (4)": "Veg"
+                          },
+                          {
+                            "Dal (1)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (3)": "Veg"
+                          },
+                          {
+                            "Live Stations (1)": "Veg"
+                          }
+                        ]
+                      },
+
+                      {
+                        "quoted": {
+                          "Quoted Price": "2200"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2000"
+                        },
+                        "label": "Veg Package 2 ( 900 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (3)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (5)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (5)": "Veg"
+                          },
+                          {
+                            "Soup (4)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (6)": "Veg"
+                          },
+                          {
+                            "Dal (2)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (5)": "Veg"
+                          },
+                          {
+                            "Live Stations (2)": "Veg"
+                          }
+                        ]
+                      },
+                      {
+                        "quoted": {
+                          "Quoted Price": "2300"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2100"
+                        },
+                        "label": "Non Veg Package 1 ( 1100 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (2)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (4)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (4)": "Veg"
+                          },
+                          {
+                            "Soup (2)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (4)": "Veg"
+                          },
+                          {
+                            "Dal (1)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (3)": "Veg"
+                          },
+                          {
+                            "Live Stations (1)": "Veg"
+                          }
+                        ]
+                      },
+                      {
+                        "quoted": {
+                          "Quoted Price": "2500"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2300"
+                        },
+                        "label": "Non Veg Package 2 ( 600 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (3)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (5)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (5)": "Veg"
+                          },
+                          {
+                            "Soup (4)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (6)": "Veg"
+                          },
+                          {
+                            "Dal (2)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (5)": "Veg"
+                          },
+                          {
+                            "Live Stations (2)": "Veg"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "Dinner": {
+                    "package_values": [
+                      {
+                        "quoted": {
+                          "Quoted Price": "1800"
+                        },
+                        "minimum": {
+                          "Minimum Price": "1600"
+                        },
+                        "label": "Veg Package 1 ( 600 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (2)": "Pepsi / Coke /"
+                          },
+                          {
+                            "Starters (4)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (4)": "Veg"
+                          },
+                          {
+                            "Soup (2)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (4)": "Veg"
+                          },
+                          {
+                            "Dal (1)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (3)": "Veg"
+                          },
+                          {
+                            "Live Stations (1)": "Veg"
+                          }
+                        ]
+                      },
+                      {
+                        "quoted": {
+                          "Quoted Price": "2200"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2000"
+                        },
+                        "label": "Veg Package 2 ( 600 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (3)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (5)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (5)": "Veg"
+                          },
+                          {
+                            "Soup (4)": "Veg"
+                          },
+                          {
+                            "Breads (6)": "Veg"
+                          },
+                          {
+                            "Main Courses (6)": "Veg"
+                          },
+                          {
+                            "Dal (2)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (5)": "Veg"
+                          },
+                          {
+                            "Live Stations (2)": "Veg"
+                          }
+                        ]
+                      },
+                      {
+                        "quoted": {
+                          "Quoted Price": "2300"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2100"
+                        },
+                        "label": "Non Veg Package 1 ( 600 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (2)": "Pepsi / Coke /"
+                          },
+                          {
+                            "Starters (4)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (4)": "Veg"
+                          },
+                          {
+                            "Soup (2)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (4)": "Veg"
+                          },
+                          {
+                            "Dal (1)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (3)": "Veg"
+                          },
+                          {
+                            "Live Stations (1)": "Veg"
+                          }
+                        ]
+                      },
+                      {
+                        "quoted": {
+                          "Quoted Price": "2500"
+                        },
+                        "minimum": {
+                          "Minimum Price": "2300"
+                        },
+                        "label": "Non Veg Package 2 ( 600 /- per plate)",
+                        "options": [
+                          {
+                            "Welcome Drink (3)": "Pepsi / Coke / Jaljeera /"
+                          },
+                          {
+                            "Starters (5)": "Veg manchurian / Hara bhara kabab / paneer pakoda"
+                          },
+                          {
+                            "Salads (5)": "Veg"
+                          },
+                          {
+                            "Soup (4)": "Veg"
+                          },
+                          {
+                            "Breads (4)": "Veg"
+                          },
+                          {
+                            "Main Courses (6)": "Veg"
+                          },
+                          {
+                            "Dal (2)": "Veg"
+                          },
+                          {
+                            "Rice (2)": "Veg"
+                          },
+                          {
+                            "Raita (1)": "Veg"
+                          },
+                          {
+                            "Desert (5)": "Veg"
+                          },
+                          {
+                            "Live Stations (2)": "Veg"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Catering  Policies",
+      "data_display": [
+        {
+          "type": "key_value",
+          "key_values": [
+            {
+              "Veg": "Yes"
+            },
+            {
+              "Jain": "Yes"
+            },
+            {
+              "Non Veg": "No"
+            }
+          ],
+          "read_more": [
+            {
+              "heading": "Catering  Policies",
+              "data_display": [
+                {
+                  "type": "key_value",
+                  "key_values": [
+                    {
+                      "Veg": "Yes"
+                    },
+                    {
+                      "Jain": "Yes"
+                    },
+                    {
+                      "Non Veg": "No"
+                    },
+                    {
+                      "General Outside Catering": "Yes"
+                    },
+                    {
+                      "Specialist Outside Catering": "Yes"
+                    },
+                    {
+                      "Outside Alchohol": "Yes"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Other Information",
+      "data_display": [
+        {
+          "type": "key_value",
+          "key_values": [
+            {
+              "Valet Service": "Yes"
+            },
+            {
+              "Music System": "Yes"
+            },
+            {
+              "DJ Booth": "No"
+            }
+          ],
+          "read_more": [
+            {
+              "heading": "Other Information",
+              "data_display": [
+                {
+                  "type": "key_value",
+                  "key_values": [
+                    {
+                      "Valet Service": "Yes"
+                    },
+                    {
+                      "Music System": "Yes"
+                    },
+                    {
+                      "DJ Booth": "No"
+                    },
+                    {
+                      "Power Back Up": "Yes"
+                    },
+                    {
+                      "Projector": "Yes"
+                    },
+                    {
+                      "": ""
+                    },
+                    {
+                      "Tie Ups": ""
+                    },
+                    {
+                      "Caterer-1": "Bhavik Caterer"
+                    },
+                    {
+                      "": "90292092000"
+                    } ,
+                    {
+                      "Caterer-2": "Ramesh Caterer"
+                    },
+                    {
+                      "": "9019019010"
+                    },
+                    {
+                      "Floorist": "Reema Flourist"
+                    },
+                    {
+                      "": "9109091090"
+                    }
+
+                  ]
+                }
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Locate us on map",
+      "data_display": [
+        {
+          "lat": "19.1777352",
+          "type": "map",
+          "long": "72.8343873"
+        }
+      ]
+    }
+  ]
+}

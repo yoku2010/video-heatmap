@@ -1,0 +1,55 @@
+.hm-video-bar-option {
+  padding: 10px;
+  overflow: hidden;
+}
+.hm-video-bar-option a {
+  margin: 5px;
+  float: right;
+  font-size: 20px;
+}
+.hm-video-bar {
+  position: relative;
+  margin: 5px 0;
+  border: 1px solid #EAEAEA;
+  background-color: #EEEEEE;
+  overflow: hidden;
+}
+.hm-video {
+  padding: 5px;
+  border-right: 1px solid #DADADA;
+  width: 200px;
+  float: left;
+}
+.hm-video img {
+  width: 100%;
+}
+.hm-details {
+  float: left;
+}
+.hm-details h4, .hm-details em {
+  padding-left: 5px;
+}
+
+.hm-options {
+  overflow: hidden;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.hm-sqr {
+  padding: 5px;
+  border: 1px solid #DADADA;
+  background-color: #FAFAFA;
+  float: right;
+  text-align: center;
+  border-radius: 5px;
+  width: 100px;
+  margin-left: 3px;
+}
+.hm-sqr p {
+  font-size: 20px;
+}
+.hm-sqr span {
+  font-size: 12px;
+}
