@@ -7,9 +7,13 @@
   float: right;
   font-size: 20px;
 }
+.hm-video-bar-option a.disabled {
+  color: #ed9e95;
+  cursor: not-allowed;
+}
 .hm-video-bar {
   position: relative;
-  margin: 5px 0;
+  margin: 10px 0 0 0;
   border: 1px solid #EAEAEA;
   background-color: #EEEEEE;
   overflow: hidden;
@@ -52,4 +56,11 @@
 }
 .hm-sqr span {
   font-size: 12px;
+}
+.hm-video-map {
+  display: none;
+  padding: 10px;
+  background-color: #FEFEFE;
+  border: 1px solid #EAEAEA;
+  height: 400px;
 }
