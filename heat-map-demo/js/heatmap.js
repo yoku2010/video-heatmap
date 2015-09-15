@@ -165,7 +165,7 @@
 
           $heatmap = $('<div></div>').attr({
             'id': 'heatmap_day'
-          }).addClass('tab-pane fade in active').appendTo($div)
+          }).addClass('tab-pane fade in active').appendTo($div);
 
           $div.appendTo($container.empty());
           hm.func.loadHeatMap($heatmap);
@@ -220,10 +220,14 @@
               $('<div></div>').addClass('col').css({
                 'background-color': hm.func.colorLuminance('#F27364', data.data[i].data[j]/100.0),
                 'width': width + '%'
-              }).attr('val', data.data[i].data[j]).appendTo($col);
+              }).attr({
+                'title': data.data[i].data[j] + ' at ' + hm.func.secToMin(j*data.size) + ' min',
+                'data-toggle':'tooltip',
+                'data-placement':'top'
+              }).appendTo($col);
             }
             // add points
-            k = 0, kln = 6, point = (data.end - data.start + 1.0)*data.size/5;
+            k = 0, kln = 5, point = (data.end - data.start + 1.0)*data.size/5;
             for (;k<kln;k++) {
               $('<span></span>').text(hm.func.secToMin(k*point)).appendTo($('<div></div>').addClass('heat-map-points').css({
                 'left':k*20 + '%'
@@ -236,9 +240,10 @@
             $row.appendTo($div);
           }
           $div.appendTo($container);
+          $('[data-toggle="tooltip"]').tooltip();
         },
         secToMin: function (sec) {
-          var min = sec/60, mod = sec%60;
+          var min = parseInt(sec/60), mod = sec%60;
           return (min<10 ? '0' + min: min) + ':' + (mod<10 ? '0' + mod: mod);
         }
       }

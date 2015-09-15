@@ -67,7 +67,6 @@
   background-color: #FEFEFE;
   border: 1px solid #DDD;
   border-top: 0 none;
-  height: 400px;
 }
 
 /* heat map*/
@@ -75,7 +74,7 @@
   margin-top: 10px;
 }
 .heat-map-row {
-  overflow: hidden;
+  height: 120px;
   padding-bottom: 10px;
 }
 .heat-map-row .cols{
