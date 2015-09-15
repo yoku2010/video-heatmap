@@ -14,9 +14,10 @@
 .hm-video-bar {
   position: relative;
   margin: 10px 0 0 0;
-  border: 1px solid #EAEAEA;
-  background-color: #EEEEEE;
+  border: 1px solid #DDD;
+  background-color: #F5F5F5;
   overflow: hidden;
+    box-shadow: 0 5px 5px rgba(150, 150, 150, 0.15);
 }
 .hm-video {
   padding: 5px;
@@ -44,7 +45,7 @@
 .hm-sqr {
   padding: 5px;
   border: 1px solid #DADADA;
-  background-color: #FAFAFA;
+  background-color: #FBFBFB;
   float: right;
   text-align: center;
   border-radius: 5px;
@@ -54,6 +55,9 @@
 .hm-sqr p {
   font-size: 20px;
 }
+.hm-sqr a {
+  cursor: pointer;
+}
 .hm-sqr span {
   font-size: 12px;
 }
@@ -61,6 +65,55 @@
   display: none;
   padding: 10px;
   background-color: #FEFEFE;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #DDD;
+  border-top: 0 none;
   height: 400px;
+}
+
+/* heat map*/
+.heat-map {
+  margin-top: 10px;
+}
+.heat-map-row {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.heat-map-row .cols{
+  clear: both;
+  float: left;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+}
+.heat-map-row .cols .heat-map-points {
+  position: absolute;
+  border-left: 2px dotted #444;
+  height: 50px;
+  bottom: 5px;
+}
+.heat-map-row .cols .heat-map-points.right {
+  border-left: 0 none;
+  border-right: 2px dotted #444;
+}
+.heat-map-row .cols .heat-map-points.right span {
+  right: 0;
+}
+.heat-map-row .cols .heat-map-points span {
+  position: absolute;
+  bottom: -20px;
+}
+.heat-map-row .cols .col {
+  height: 50px;
+  display: inline-block;
+  opacity: 1;
+}
+.heat-map .date {
+  background:  #5AC4EB;
+  color: #FFF;
+  float: left;
+  padding: 3px;
+  font-size: 11px;
+  text-align: center;
+  width: 80px;
+  font-weight: bold;
 }
