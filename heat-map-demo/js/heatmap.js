@@ -210,6 +210,7 @@
             ]
           }, $div, $row, $col, $date, i = 0, iln = data.data.length, j, jln = data.end, width, point, k, kln, sagment = 0, color = '#F27364', gradient = '';
           $div = $('<div></div>').addClass('heat-map');
+          hm.func.heatMapLegend($div);
           for (;i<iln;i++) {
             $row = $('<div></div>').addClass('heat-map-row');
             $col = $('<div></div>').addClass('cols');
@@ -269,6 +270,15 @@
             $row.appendTo($div);
           }
           $div.appendTo($container);
+        },
+        heatMapLegend: function ($container) {
+          var $row = $('<div></div>').addClass('heat-map-legend'),
+          gradient = '#0021FF,#00D7FF,#90FF6C,#FFEA00,#FFEA00,#FF9100,#FF1D00',
+          $div = $('<div></div>').addClass('hm-legend').css('background','linear-gradient(to right,' + gradient + ')');;
+          $('<span></span>').addClass('text-left').text('Low').appendTo($div);
+          $('<span></span>').addClass('text-right').text('High').appendTo($div);
+          $div.appendTo($row);
+          $row.appendTo($container);
         },
         secToMin: function (sec) {
           var min = parseInt(sec/60), mod = sec%60;
